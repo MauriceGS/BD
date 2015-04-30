@@ -1,0 +1,180 @@
+
+<html>
+	<head>
+		<title>BioStore</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+
+		<!-- Header Wrapper -->
+			<div class="wrapper style1">
+			
+			<!-- Header -->
+				<div id="header">
+					<div class="container">
+							
+						<!-- Logo -->
+							<h1><a href="#" id="logo">BioStore</a></h1>
+						
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="active"><a href="index.html">Home</a></li>
+									<li>
+										<a href="">Dropdown</a>
+										<ul>
+											<li><a href="#">Lorem ipsum dolor</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li><a href="#">Etiam dolore nisl</a></li>
+											<li>
+												<a href="">Phasellus consequat</a>
+												<ul>
+													<li><a href="#">Lorem ipsum dolor</a></li>
+													<li><a href="#">Phasellus consequat</a></li>
+													<li><a href="#">Magna phasellus</a></li>
+													<li><a href="#">Etiam dolore nisl</a></li>
+													<li><a href="#">Veroeros feugiat</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Veroeros feugiat</a></li>
+										</ul>
+									</li>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+								</ul>
+							</nav>
+	
+					</div>
+				</div>
+				
+			<!-- Banner -->
+				<div id="banner">
+					<section class="container">
+						<h2>BioStore</h2>
+						<span>Green is our business</span>
+						<p>Tu tienda departamental eco-friendly</p>
+					</section>
+				</div>
+
+			</div>
+		
+		<!-- Section One -->
+			<div class="wrapper style2">
+				<section class="container">
+					<div class="row double">
+						<div class="6u">
+							<header class="major">
+								<h2>Bienvenido al portal de empleados, aquí podras realizar las siguientes acciones :</h2>
+								<span class="byline">Dar de alta o borrar las siguientes entidades: Areas, Clientes, Empleados, Productos y Proveedores</span>
+							</header>
+						</div>
+						<div class="6u">
+							<h3>Portal de Ventas</h3>
+							<p>Cuando hagas una venta, utiliza este portal para registrarla y que se sume automáticamente a tu comisión</p>
+							<a href="#" class="button">Inicio</a>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		<!-- Section Two -->
+			<div class="wrapper style5">
+				<section class="container">
+					<header class="major">
+						<h2>Ventas</h2>
+					</header>
+					<p>Si hiciste una venta recuerda registrarla aquí</p>
+					<%= button_to "Ventas", venta_path, method: :get %>
+				</section>
+			</div>
+
+		<!-- Section Three -->
+			<div class="wrapper style4">
+				<section class="container">
+					<header class="major">
+						<h2>OPCIONES</h2>
+						<span class="byline">Elige una de las siguientes opciones</span>
+					</header>
+					<div class="row flush">
+						<div class="4u">
+							<ul class="special-icons">
+								<li>
+									<%= button_to "Areas", areas_path, method: :get %>
+									<p>Aquí podrás crear, editar o borrar las areas de BioStore</p>
+								</li>
+								
+							</ul>
+						</div>
+						<div class="4u">
+							<ul class="special-icons">
+								<li>									
+									<%= button_to "Productos", productos_path, method: :get %>
+									<p>Aquí podrás ver nuestros productos, al igual que editarlos o borrarlos</p>
+								</li>
+								<li>
+									
+									<%= button_to "Proveedores", proveedors_path, method: :get %>
+									<p>Da de alta, edita o borra uno de nuestros proveedores</p>
+								</li>
+								<li>
+									
+									<%= button_to "Clientes", clientes_path, method: :get %>
+									<p>Aquí podrás dar de alta un nuevo cliente al igual que borrarlo</p>
+								</li>
+							</ul>
+						</div>
+						<div class="4u">
+							<ul class="special-icons">
+							<li>
+
+									<%= button_to "Empleados", empleados_path, method: :get %>
+									<p>Aquí podrás dar de alta un nuevo empleado al igual que borrarlo</p>
+								</li>
+							
+								
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		
+		
+	<!-- Footer -->
+		<div id="footer">
+			<section class="container">
+				<header class="major">
+					<h2>Connect with us</h2>
+					<span class="byline">Mauricio Garcia Sainz A01019672</span>
+					<br>
+					<span class="byline">Fabian Villanueva A01334383</span>
+					<br>
+					<span class="byline">Hector Monarrez A01114036</span>
+				</header>
+				<ul class="icons">
+				
+				</ul>
+				<hr />
+			</section>
+			
+			<!-- Copyright -->
+				<div id="copyright">
+					Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+				</div>			
+		</div>
+
+	</body>
+</html>

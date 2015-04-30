@@ -1,0 +1,98 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Productos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Proveedor</th>
+      <th>Marca</th>
+      <th>Cantidad</th>
+      <th>Tipo</th>
+      <th>Precio</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productos.each do |producto| %>
+      <tr>
+        <td><%= producto.nombre %></td>
+        <td><%= Proveedor.find(producto.proveedor_id).nombre %></td>
+        <td><%= producto.marca %></td>
+        <td><%= producto.cantidad %></td>
+        <td> <%= Producto::Category::List[producto.tipo.to_i][:text] %></td>
+        <td><%= producto.precio %></td>
+        <td><%= link_to 'Show', producto %></td>
+        <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
+        <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Producto', new_producto_path %>
+
+<div class="row flush">
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Areas", areas_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Clientes", clientes_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Empleados", empleados_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Proveedores", proveedors_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Venta", venta_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            
+
+
+
+
+
+
+

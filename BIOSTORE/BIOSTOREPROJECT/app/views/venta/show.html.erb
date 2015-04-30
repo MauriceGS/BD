@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @ventum.fecha %>
+</p>
+
+<p>
+  <strong>Cantidad productos:</strong>
+  <%= @ventum.cantidad_productos %>
+</p>
+<p>
+  <strong>Total de Venta :</strong>
+  <%= @ventum.total %>
+</p>
+<p>
+  <strong>Comision de Venta:</strong>
+  <%= @ventum.total * 0.10 %>
+</p>
+<p>
+  <strong>Empleado:</strong>
+   <%= Empleado.find(@ventum.empleado_id).nombre %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= Cliente.find(@ventum.cliente_id).nombre %>
+</p>
+
+<%= link_to 'Edit', edit_ventum_path(@ventum) %> |
+<%= link_to 'Back', venta_path %>

@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Mail</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clientes.each do |cliente| %>
+      <tr>
+        <td><%= cliente.nombre %></td>
+                       <td><%= cliente.mail %></td>
+        <td><%= link_to 'Show', cliente %></td>
+        <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+        <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cliente', new_cliente_path %>
+
+<br>
+
+<div class="row flush">
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Areas", areas_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Productos", productos_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Empleados", empleados_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Proveedores", proveedors_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Venta", venta_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+

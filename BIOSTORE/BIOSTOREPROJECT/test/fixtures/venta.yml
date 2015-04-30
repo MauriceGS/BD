@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2015-04-28
+  cantidad_productos: 1
+  empleado_id: 1
+  cliente_id: 1
+
+two:
+  fecha: 2015-04-28
+  cantidad_productos: 1
+  empleado_id: 1
+  cliente_id: 1

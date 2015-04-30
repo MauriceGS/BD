@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Total empleados</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @areas.each do |area| %>
+      <tr>
+        <td><%= area.nombre %></td>
+        <td><%= area.descripcion %></td>
+        <td><%= area.total_empleados %></td>
+        <td><%= link_to 'Show', area %></td>
+        <td><%= link_to 'Edit', edit_area_path(area) %></td>
+        <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Area', new_area_path %>
+
+<div class="row flush">
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Productos", productos_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Clientes", clientes_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Empleados", empleados_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Proveedores", proveedors_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="4u">
+              <ul class="special-icons">
+                <li>
+                  <%= button_to "Venta", venta_path, method: :get %>
+                  
+                </li>
+                
+              </ul>
+            </div>

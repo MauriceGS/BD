@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @area.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @area.descripcion %>
+</p>
+
+<p>
+  <strong>Total empleados:</strong>
+  <%= @area.total_empleados %>
+</p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= Proveedor.find(@area.proveedor_id.to_i).nombre %>
+
+</p>
+
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>
+
